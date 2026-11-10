@@ -1,7 +1,14 @@
 # GROUP-WORK
-MULISA ISAEL JALIES 20252SEN228
-MUTAMBA ALICE 27688
-IRUMVA AMANI   29765
-TUMWINE KENELT 20252SEN344
-ISHIMWE  DANIEL 20252SEN037
-KACYEYE  IGIHOZO JANE 20251SEN124
+NAMES                                           ID
+MULISA ISAEL JALIES                            20252SEN228
+
+
+MUTAMBA ALICE                                    27688
+
+IRUMVA AMANI                                      29765
+
+TUMWINE KENELT                                   20252SEN344
+
+ISHIMWE  DANIEL                                  20252SEN037
+
+KACYEYE  IGIHOZO JANE                         20251SEN124
