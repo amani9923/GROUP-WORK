@@ -12,6 +12,9 @@ IRUMVA AMANI                                      29765
 
 TUMWINE KENELT                                   20252SEN344
 
+ISHIMWE PITIE                                   29767
+
+
 ISHIMWE  DANIEL                                  20252SEN037
 
 KACYEYE  IGIHOZO JANE                         20251SEN124
