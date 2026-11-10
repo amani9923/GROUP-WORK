@@ -18,17 +18,27 @@ KACYEYE  IGIHOZO JANE                         20251SEN124
 
 
 1. Create the Trigger TRG_RESTRICT_LOGIN_HOURS
+
+   
 You must create it as SYS or user with ADMINISTER DATABASE TRIGGER.sql-- Run as SYSDBA
+
+
 CREATE OR REPLACE TRIGGER TRG_RESTRICT_LOGIN_HOURS
+
 AFTER LOGON ON DATABASE
+
 DECLARE
+
   v_user      VARCHAR2(30);
   v_day_num   NUMBER; -- 1=Sunday, 2=Monday ... 7=Saturday in NLS_TERRITORY=AMERICA
   v_day_name  VARCHAR2(10);
   v_time_num  NUMBER; -- HH24MI e.g. 0830 = 830, 1700 = 1700
 BEGIN
+
   -- 2. Identify user
   v_user := SYS_CONTEXT('USERENV','SESSION_USER');
+
+  
 
   -- 4. Exceptions: SYS, SYSTEM, DBA_ADMIN can log in any time
   IF UPPER(v_user) IN ('SYS','SYSTEM','DBA_ADMIN') THEN
@@ -36,10 +46,17 @@ BEGIN
   END IF;
 
   -- Get day and time from DB server
+  
   -- Adjust if your DB server time is not Africa/Kigali
+
+
+  
   v_day_num  := TO_NUMBER(TO_CHAR(SYSDATE, 'D', 'NLS_TERRITORY=AMERICA'));
   v_day_name := TO_CHAR(SYSDATE, 'DY', 'NLS_DATE_LANGUAGE=AMERICAN');
   v_time_num := TO_NUMBER(TO_CHAR(SYSDATE, 'HH24MI'));
+
+
+  
 
   -- Convert: 2=Mon, 3=Tue, 4=Wed, 5=Thu, 6=Fri, 7=Sat, 1=Sun
   IF v_day_num BETWEEN 2 AND 5 THEN -- Monday-Thursday
